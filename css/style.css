@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+    font-size: 62.5%;
+    color: #5C5C5C;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #DB0432;
+    font-size: 20px;
+}
+
+input {
+    border: none;
+}
+
+textarea {
+    border: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem 20%;
+    background-color: #fff;
+    border: .2rem solid #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+@media (max-width: 1450px){
+    .container {
+        margin: 5rem 10%;
+    }
+}
+
+@media (max-width: 1080px){
+    .container {
+        margin: 5rem 1rem;
+    }
+}
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #D9915F;
+    padding: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: .4rem dashed #D9915F;
+}
+
+.inputs-fields {
+    padding: 3rem;
+}
+
+.inputs-fields-single {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-fields-single input, .inputs-fields-single textarea {
+    border: .15rem solid #abb8c3;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.inputs-fields-single input {
+    height: 3.5rem;
+}
+
+.inputs-fields-single label {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.inputs-fields textarea { 
+    height: 16.5rem;
+}
+
+.inputs-fields-single input:hover, .inputs-fields-single textarea:hover {
+    border: .2rem solid #000;
+    border-radius: .4rem;
+}
+
+.custom-file-input {
+color: transparent;
+border: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+visibility: hidden;
+}
+.custom-file-input::before {
+content: 'Pievienot attēlu';
+text-align: center;
+color: black;
+outline: none;
+-webkit-user-select: none;
+cursor: pointer;
+}
+
+.custom-file-input:active {
+outline: 0;
+}
+
+.custom-file-input:hover {
+    cursor: pointer;
+}
+
+.input-btn {
+    text-align: center;
+}
+
+.funcion-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.funcion-btn input {
+    margin: 2rem;
+}
+
+input.btn{
+    display:block;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    border: .15rem solid #5C5C5C; 
+    background-color: #fff;
+    color: #5C5C5C;   
+}
+
+input.btn-add:hover {
+    background-color: #00d084;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+input.btn-delete:hover {
+    background-color: #cf2e2e;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+
+input.btn-submit, input.btn-cont {
+    color: #fff;
+    background: #DB0432;
+    padding: 1rem 0;
+    width: 15rem;
+    text-transform: uppercase;
+}
+
+input.btn-submit:hover, input.btn-cont:hover {
+    background-color: #00d084;
+    cursor: pointer;
+}
+
+.page-btn {
+    text-decoration: none;
+    color: #fff;
+    border: .2rem solid #fff;
+    padding: .5rem;
+    margin-left: 2rem;
+    
+}
+
+.page-btn:hover {
+    background-color: #00d084;
+    cursor: pointer;
+}
+.alert-box {
+    background-color: #cf2e2e;
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    padding: 3rem;
+}
+
+.suc-box {
+    background-color: #00d084;
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    padding: 3rem;
+}
+
+.none {
+    display: none;
+}
+
+.padding-top {
+    padding-top: 4.5rem;
+}
+
+.doc, .settl{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: .5rem;
+    border: .2rem solid #D9915F;   
+}
+
+@media (max-width: 880px){
+    .doc, .settl {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.doc-single {
+    padding: .5rem;
+    
+}
+
+.doc-single h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.doc-single h2 {
+    font-size: 2rem;
+}
+
+.doc-single button {
+    border: none;
+    border-radius: .3rem;
+    padding: 2.1rem 2.1rem;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #cf2e2e;
+    color: #fff;
+}
+
+.btn-select {
+    background-color: #5C5C5C;
+    color: #fff;
+}
+
+.btn-select:hover {
+    background-color: #00d084;
+    color: #fff;
+}
+
+.green {
+    background-color: #00d084;
+} 
+
+
+
+.settl-single{
+    flex: 33%;
+}
+
+.settl-single-img img{
+    max-width: 30rem;
+    
+}
+
+.settl-single-detail h4 {
+    font-size: 1.8rem;
+}
+
+.settl-single-detail h5 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
