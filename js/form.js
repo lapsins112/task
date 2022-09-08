@@ -19,6 +19,7 @@ $(document).ready(function(e){
                 }else if(data.status == "error"){
                     $('.alert-box').html('<p>'+data.message+'</p>');
                     $('.alert-box').removeClass('none');
+                    
                 }
             },
         });
