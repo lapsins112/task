@@ -19,7 +19,7 @@
             <div class="inputs" >
                 <div class="inputs-fields">
                     <div class="inputs-fields-heading">
-                        <h2>Avnasa norēķins nr:1</h2>
+                        <h2>Avanasa norēķins nr:1</h2>
                     </div>
                     <div class="inputs-fields-single">
                         <label>Dokumneta datums</label>

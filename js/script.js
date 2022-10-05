@@ -2,9 +2,9 @@ function addForm() {
   $formNr=$(".inputs").length;
   $formNr=$formNr+1;
   $(".inputs:last").after(`
-  <div class="inputs" >
+  <div class="inputs">
   <div class="inputs-fields">
-      <div class="inputs-fields-heading"><h2>Avnasa norēķins nr:`+$formNr+`</h2></div>
+      <div class="inputs-fields-heading"><h2>Avanasa norēķins nr:`+$formNr+`</h2></div>
       <div class="inputs-fields-single">
           <label>Dokumneta datums</label>
           <input type="date" name="doc-date[]" required class="form-control" />
@@ -40,7 +40,7 @@ function deleteForm() {
   $inputs=$(".inputs").length;
   if($inputs > 1){
     if(confirm("Vai tešām vēlaties dzēst?")){
-      $("#form_id")[0].reset();
+      $(".inputs:last").remove();
     }
   }else{
     if(confirm("Vai tešām vēlaties dzēst ievadītos datus?")){

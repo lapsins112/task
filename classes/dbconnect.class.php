@@ -2,7 +2,7 @@
 class DBConnect {
     public $connect;
     private $host = 'localhost';
-    private $username = 'root2';
+    private $username = 'root';
     private $password = 'root';
     private $database = 'settlement_data';
 

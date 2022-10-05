@@ -12,12 +12,12 @@ function fetchData($id){
         $ob = new DBOperations;    
         $ob = $ob->getData($query);
         while($row = $ob->fetch_assoc()) {
-        
+        $pic = ltrim($row['doc_picture'], '../');
         $set .= "
         <div class='settl'>
             <div class='settl-single'>
                 <div class='settl-single-img'>
-                    <img src='".$row['doc_picture']."' alt='".$row['doc_nr']." '>
+                    <img src='".$pic."' alt='".$row['doc_nr']." '>
                 </div>
             </div>
             <div class='settl-single'>
