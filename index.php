@@ -13,7 +13,8 @@
     <div class="container">
         <div class="heading">
             <h1>Avansa norēķinu iesniegšana.</h1>
-            <a class="page-btn" href="report.php">Atskaites</a>
+            <a class="page-btn" href="report.php">Apstiprināšana</a>
+            <a class="page-btn" href="documents.php">Atskaites</a>
         </div>
         <form id="form_id" method="post" enctype="multipart/form-data">
             <div class="inputs" >

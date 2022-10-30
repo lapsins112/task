@@ -17,11 +17,11 @@ require_once("includes/doc-handler.inc.php");
     <div class="heading">
         <h1>Avansa norēķinu atskaites.</h1>
         <a class="page-btn" href="index.php">Iesniegšana</a>
-        <a class="page-btn" href="documents.php">Atskaites</a>
+        <a class="page-btn" href="report.php">Apstiprināšana</a>
     </div>
     <div class="wrapper">
         <?php
-            echo printData(newSelectOb());
+            echo printDoc(newSelectOb());
         ?>
     </div>
 </div> 

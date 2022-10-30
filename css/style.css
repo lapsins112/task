@@ -16,7 +16,7 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: #DB0432;
+    background-color: #000000;
     font-size: 20px;
 }
 
@@ -26,6 +26,7 @@ input {
 
 textarea {
     border: none;
+    resize: vertical;
 }
 
 .container {
@@ -58,6 +59,7 @@ textarea {
     padding: 2rem;
     color: #fff;
     text-transform: uppercase;
+    flex-wrap: wrap;
 }
 
 .inputs {
@@ -85,6 +87,7 @@ textarea {
 
 .inputs-fields-single input {
     height: 3.5rem;
+    width: 33rem;
 }
 
 .inputs-fields-single label {
@@ -94,6 +97,16 @@ textarea {
 
 .inputs-fields textarea { 
     height: 16.5rem;
+    width: 33rem;
+}
+
+@media (max-width: 375px){
+    .inputs-fields-single input {
+        width: 25rem;
+    }
+    .inputs-fields textarea { 
+        width: 25rem;
+    }
 }
 
 .inputs-fields-single input:hover, .inputs-fields-single textarea:hover {
@@ -169,7 +182,7 @@ input.btn-delete:hover {
 
 input.btn-submit, input.btn-cont {
     color: #fff;
-    background: #DB0432;
+    background: #5C5C5C;
     padding: 1rem 0;
     width: 15rem;
     text-transform: uppercase;
@@ -276,6 +289,16 @@ input.btn-submit:hover, input.btn-cont:hover {
 .green {
     background-color: #00d084;
 } 
+
+.box-update {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 100%;
+    border-radius: .3rem;
+    color: #fff;
+}
 
 .settl-single{
     flex: 33%;
