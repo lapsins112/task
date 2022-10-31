@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avansa norēķinu iesniegšana</title>
+    <title>Dokumenta iesniegšana</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="heading">
-            <h1>Avansa norēķinu iesniegšana.</h1>
+            <h1>Dokumentas iesniegšana.</h1>
             <a class="page-btn" href="report.php">Apstiprināšana</a>
             <a class="page-btn" href="documents.php">Atskaites</a>
         </div>

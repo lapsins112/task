@@ -51,7 +51,7 @@ if(isset($pic) && isset($dD) && isset($dN) && isset($dCp) && isset($dS) && isset
             
             if(($insertSingle->setUpdate($insertS)) && ($file->upload())) {
                 if($i+1 == $count){
-                    $message = 'Avanasa norēķins veiskmīgi iesniegts!';
+                    $message = 'Dokuments veiskmīgi iesniegts!';
                     $status = 'success';
                 }
             } else {
