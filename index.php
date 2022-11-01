@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="heading">
-            <h1>Dokumentas iesniegšana.</h1>
+            <h1>Dokumenta iesniegšana.</h1>
             <a class="page-btn" href="report.php">Apstiprināšana</a>
             <a class="page-btn" href="documents.php">Atskaites</a>
         </div>

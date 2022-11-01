@@ -290,6 +290,10 @@ input.btn-submit:hover, input.btn-cont:hover {
     background-color: #00d084;
 } 
 
+.red {
+    background-color: #cf2e2e;
+}
+
 .box-update {
     display: flex;
     justify-content: center;

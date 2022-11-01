@@ -65,8 +65,8 @@ function printDoc($results){
                 <h3 class='doc-single-edit-date date-".$row['id']."'>".($row['d_status'] == 1 ? $row['s_date'] : 'nav apstiprināts')."</h3>
             </div>
             <div class='doc-single'>
-                <div id='btn-update' class='box-update ".($row['d_status'] == 1 ? 'green' : '')."' data-value='".$row['id']."' 
-                ".($row['d_status'] == 1 ? 'disabled' : '').">".($row['d_status'] == 1 ? 'Ir apstiprināts' : 'Apstiprināt')."</div>
+                <div id='btn-update' class='box-update ".($row['d_status'] == 1 ? 'green' : 'red')."'>
+                ".($row['d_status'] == 1 ? 'Ir apstiprināts' : 'Nav apstiprināts')."</div>
             </div>
             <div class='doc-single'>
                 <button id='btn-select' class='btn-select btn-s-".$row['id']."' data-value='".$row['id']."' onclick='selectSet(this);'>Apskatīt</button>

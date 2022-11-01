@@ -10,36 +10,40 @@ $dCm = $_POST['doc-comment'];
 $message = "";
 
 if(isset($pic) && isset($dD) && isset($dN) && isset($dCp) && isset($dS) && isset($dCm)){
-    $sum = "'" . array_sum($dS) . "'";
-    $insertQuery = "INSERT INTO document (a_sum) VALUES ($sum)";
-    $insertDoc = new DBOperations;
-    $insertDoc->setUpdate($insertQuery);
-    $id = $insertDoc->getId();
-    $insertQuery  = "INSERT INTO document_status (d_status, doc_id) VALUES (0, $id)";
-    $insertStat = new DBOperations;
-    $insertStat->setUpdate($insertQuery);
-    $count = count($pic['tmp_name']);
     
+    $count = count($pic['tmp_name']);
+
     for($i=0; $i<$count;$i++){
         
-        if (!preg_match("/^[a-zA-Z0-9 ]*$/",$dN[$i])){
-            $dNErr = " Lūdzu ievadiet avanas norēķinā nr:" . $i+1 . " lauciņā - Dokumenta nr. tikai ciparus vai burtus!";
+        if (!preg_match("/^[a-zA-Z0-9 -]*$/",$dN[$i])){
+            $dNErr = $i+1 . ". avanas norēķina lauciņā - Dokumenta nr. ievadiet tikai ciparus vai burtus!";
             $message .= $dNErr . "<br>";
         }
-        if (!preg_match("/^[a-zA-Z0-9 ]*$/",$dCp[$i])){
-            $dCpErr = " Lūdzu ievadiet avanas norēķinā nr:" . $i+1 . " lauciņā - Uzņēmums/ iestāde, kas izsniedza dokumentu tikai ciparus vai burtus!";
+        if (!preg_match('/^[a-zA-Z0-9 \āčēģšņūķļĀČĒĢŠŅŪĶĻ$\"\'\?\-]+/',$dCp[$i])){
+            $dCpErr = $i+1 . ". avanas norēķina lauciņā - Uzņēmums/ iestāde, kas izsniedza dokumentu ievadiet tikai ciparus vai burtus!";
             $message .= $dCpErr . "<br>";
         } 
         if (!preg_match("/^\d{1,10}(?:\.\d{1,2})?$/",$dS[$i])){
-            $dSErr = " Lūdzu ievadiet avanas norēķinā nr:" . $i+1 . " lauciņā - Summa ar PVN tikai ciparus!";
+            $dSErr = $i+1 . ". avanas norēķina lauciņā - Summa ar PVN ievadiet tikai ciparus!";
             $message .= $dSErr . "<br>";
         } 
-        if (!preg_match("/^[a-zA-Z0-9 ]*$/",$dCm[$i])){
-            $dCmErr = " Lūdzu ievadiet avanas norēķinā nr:" . $i+1 . " lauciņā - Komentārs/ iemesls, kam izlietoti līdzekļi tikai ciparus vai burtus!";
+        if (!preg_match("/^[\.a-zA-Z0-9,.!? \āčēģšņūķļĀČĒĢŠŅŪĶĻ$\-]*$/",$dCm[$i])){
+            $dCmErr = $i+1 . ". avanas norēķina lauciņā - Komentārs/ iemesls, kam izlietoti līdzekļi ievadiet tikai ciparus vai burtus!";
             $message .= $dCmErr . "<br>";
         }
         
         if(empty($message)){
+
+            if($i==0){
+                $sum = "'" . array_sum($dS) . "'";
+                $insertQuery = "INSERT INTO document (a_sum) VALUES ($sum)";
+                $insertDoc = new DBOperations;
+                $insertDoc->setUpdate($insertQuery);
+                $id = $insertDoc->getId();
+                $insertQuery  = "INSERT INTO document_status (d_status, doc_id) VALUES (0, $id)";
+                $insertStat = new DBOperations;
+                $insertStat->setUpdate($insertQuery);
+            }
             $fs = $pic['size'][$i];
             $fn = $pic['name'][$i];
             $tmn = $pic['tmp_name'][$i]; 
